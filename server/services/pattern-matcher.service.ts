@@ -23,16 +23,19 @@ const applyPatterns = (item: Item): string[] => {
 export const applyPattern = (item: Item, pattern: Pattern) => {
   if (isItemMatch(item, pattern.regex)) {
     stdoutItem(pattern.name, item);
+    liveItemStream.emit("feed", item);
   }
 };
 
 export const matchPatterns = (item: Item) => {
+  // Apply all runtime patterns
   const itemCategories = applyPatterns(item);
 
   if (itemCategories.length > 0) {
     liveItemStream.emit("feed", item);
   }
 
+  // stdout item to specific category name defined in pattern
   for (const category of itemCategories) {
     stdoutItem(category, item);
   }

@@ -1,8 +1,8 @@
 import { Item } from "rss-parser";
-import { errors } from "../../config";
-import { FeedCache, PatternCache } from "../cache";
-import { Pattern } from "../models";
-import { applyPattern } from "./pattern-matcher.service";
+import { errors } from "../../../config";
+import { FeedCache, PatternCache } from "../../cache";
+import { Pattern } from "../../models";
+import { applyPattern } from "../pattern-matcher.service";
 
 const patternCache = PatternCache.getInstance();
 const feedCache = FeedCache.getInstance();

@@ -1,8 +1,7 @@
 import { Item, Output } from "rss-parser";
 import { PATTERN_MATCH_PROPERTIES } from "./consts";
 
-export const flattenItems = (feeds: Output<any>[]) =>
-  feeds.map((feed) => feed.items).flat();
+export const flattenItems = (feeds: Output<any>[]) => feeds.map((feed) => feed.items).flat();
 
 export const flattenContent = (item: Item): string => {
   let content = "";
@@ -15,7 +14,7 @@ export const flattenContent = (item: Item): string => {
   return content;
 };
 
-export const stdout = (item: Item) => {
+export const output = (item: Item) => {
   const date = new Date().toISOString();
   const output = [
     "\n------------------------",

@@ -1,22 +1,20 @@
-import { POOLING_INTERVAL } from "../../config";
+import { PULL_INTERVAL } from "../../config";
 import logger from "../../config/logger.config";
 import { SourceCache } from "../cache";
-import { mapFulfilledPromises, parseURL } from "../utils";
+import { mapFulfilledValues, parseURL } from "../utils";
 import { resolveFeeds } from "./feed-resolver.service";
 
 const sourceCache = SourceCache.getInstance();
 
 const fetchData = async () => {
   try {
-    logger.info(
-      `Polling rss feeds from ${sourceCache
-        .getValues()
-        .map((source) => source.name)}`
-    );
     const sources = sourceCache.getSources();
+
+    logger.info(`Pull rss feeds from sources: ${sources.join(" | ")}`);
+
     const rssParsers = sources.map((source) => parseURL(source));
     const response = await Promise.allSettled(rssParsers);
-    const feeds = mapFulfilledPromises(response);
+    const feeds = mapFulfilledValues(response);
 
     await resolveFeeds(feeds);
   } catch (error) {
@@ -24,6 +22,6 @@ const fetchData = async () => {
   }
 };
 
-export const startFeedPolling = () => {
-  setInterval(fetchData, Number(POOLING_INTERVAL));
+export const startFeedPull = () => {
+  setInterval(fetchData, Number(PULL_INTERVAL));
 };

@@ -12,5 +12,5 @@ if (process.env.NODE_ENV) {
 export * from "./express.config";
 export * from "./api-error.constants";
 
-export const POOLING_INTERVAL = process.env.POOLING_INTERVAL;
+export const PULL_INTERVAL = process.env.PULL_INTERVAL;
 export const STDOUT = process.env.STDOUT;

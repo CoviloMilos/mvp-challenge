@@ -7,14 +7,6 @@ export class CacheBase<T> {
     }
   }
 
-  public getValue(key: string): T | undefined {
-    return this.data[key];
-  }
-
-  public clear(): void {
-    this.data = {};
-  }
-
   public getData(): Record<string, T> {
     return this.data;
   }

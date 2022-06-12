@@ -1,12 +1,10 @@
 import { expressApp } from "./config";
-import { startFeedPolling } from "./server";
+import { startFeedPull } from "./server";
 import startupConfig from "./seed";
 import logger from "./config/logger.config";
 const socketio = require("socket.io");
 
-const server = expressApp.listen(process.env.PORT, () =>
-  logger.info(`Server running on port ${process.env.PORT}`)
-);
+const server = expressApp.listen(process.env.PORT, () => logger.info(`Server running on port ${process.env.PORT}`));
 
 startupConfig();
 
@@ -15,4 +13,4 @@ liveItemStream.on("connection", (socket: any) => {
   logger.info(`Connected clients count: ${liveItemStream.engine.clientsCount}`);
 });
 
-startFeedPolling();
+startFeedPull();

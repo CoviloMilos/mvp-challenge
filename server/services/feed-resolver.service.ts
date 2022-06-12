@@ -13,6 +13,7 @@ const saveFeedItem = (item: Item) => {
 const incompleteItem = (item: Item) => !item.content;
 
 export const resolveFeeds = async (feeds: Output<any>[]) => {
+  // Join items from all feeds
   const items: Item[] = flattenItems(feeds);
 
   // Feeds that don't have content tag needed for matching pattern

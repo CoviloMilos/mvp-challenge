@@ -1,8 +1,11 @@
 import fs from "fs";
 import path from "path";
-import { stdout } from "./model.helper";
+import { output } from "./model.helper";
 
 export const removeFilesFromDir = (dir: string): void => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
   fs.readdir(dir, (err, files) => {
     if (err) throw err;
 
@@ -19,8 +22,7 @@ export const readFile = (path: string): any => {
   return JSON.parse(data.toString());
 };
 
-export const stdoutItem = async (fileName: string, item: any) =>
-  appendFileAsync(`./stdout/${fileName}.txt`, stdout(item));
+export const stdoutItem = async (fileName: string, item: any) => appendFileAsync(`./stdout/${fileName}.txt`, output(item));
 
 const appendFileAsync = (path: string, data: string): Promise<void> => {
   return new Promise((resolve, reject) => {

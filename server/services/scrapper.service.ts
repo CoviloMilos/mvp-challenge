@@ -1,6 +1,6 @@
 import cheerio from "cheerio";
 import axios from "axios";
-import { mapFulfilledPromises } from "../utils";
+import { mapFulfilledValues } from "../utils";
 import logger from "../../config/logger.config";
 
 export const extractItemFromWebpage = async (urls: string[]) => {
@@ -9,7 +9,7 @@ export const extractItemFromWebpage = async (urls: string[]) => {
 
     const responses = await Promise.allSettled(requests);
 
-    const res = mapFulfilledPromises(responses);
+    const res = mapFulfilledValues(responses);
 
     const contents = res.map(({ data }) => getContent(data));
 

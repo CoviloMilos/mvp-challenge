@@ -1,11 +1,10 @@
-import { errors } from "../../config";
-import { SourceCache } from "../cache";
-import { Source } from "../models";
+import { errors } from "../../../config";
+import { SourceCache } from "../../cache";
+import { Source } from "../../models";
 
 const sourceCache = SourceCache.getInstance();
 
-const createSource = (source: Source) =>
-  sourceCache.setValue(source.name, source);
+const createSource = (source: Source) => sourceCache.setValue(source.name, source);
 
 const listSources = () => sourceCache.getData();
 
