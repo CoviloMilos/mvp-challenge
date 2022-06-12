@@ -39,7 +39,7 @@ Feed items
 
 # Stdout stream
 
-- Whenever mathced item is found it will be printed at ./stdout folder in file (defined as category). For exmaple =>
+- Whenever mathced item is found it will be printed at ./stdout folder in file (defined as category). example =>
 
   ```javscript
   const pattern = {
