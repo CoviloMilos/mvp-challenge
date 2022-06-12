@@ -37,3 +37,11 @@ Feed items
 
 - On http://localhost:3000 there is small webpage for rendering live news
 
+# Stdout stream
+
+- Whenever mathced item is found it will be printed at ./stdout folder in file (defined as category). For exmaple =>
+  Pattern {
+    name: "crypto",
+    pattern: .*Crypto.*
+  }
+  If item matches above pattern it will be printed in stdout/crypto.txt
