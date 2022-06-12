@@ -13,4 +13,5 @@ liveItemStream.on("connection", (socket: any) => {
   logger.info(`Connected clients count: ${liveItemStream.engine.clientsCount}`);
 });
 
+// In 15 secs first pull will happend
 startFeedPull();

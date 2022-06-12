@@ -14,5 +14,9 @@
   {
     "name": "cointelegraph",
     "url": "https://cointelegraph.com/rss"
+  },
+  {
+    "name": "bitcoin",
+    "url": "https://news.bitcoin.com/feed/"
   }
 ]
