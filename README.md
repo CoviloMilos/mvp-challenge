@@ -56,4 +56,4 @@ Feed items
 # Improvements
 
 - Write unit/integration tests
-- Build custom rss feed reader library.
+- Build custom rss feed parser library.
