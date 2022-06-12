@@ -11,3 +11,9 @@ Core libraries
 - rss-parser (Fetching and parsing feed items)
 - socket.io (Real-time stream of new feed item)
 
+API endpoints
+
+# Pattern
+- POST /patterns - create pattern in runtime and apply it to all feed items from cache
+- DELETE /patterns/:name - remove pattern from runtime (will not be applied to new incoming feed items)
+- GET /patterns - list current patterns
