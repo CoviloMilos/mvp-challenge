@@ -35,7 +35,7 @@ Feed items
 
 # Live news
 
-- On http://localhost:3000 there is small webpage for rendering live news
+- On http://localhost:3000 there is small webpage for rendering live news (Open this page before running app so you don't have to wait for next pull)
 
 # Stdout stream
 
