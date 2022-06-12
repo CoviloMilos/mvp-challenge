@@ -15,7 +15,7 @@
 
 Pattern
 
-- POST /patterns - create pattern in runtime and apply it to all feed items from cache
+- POST /patterns - create pattern in runtime and apply it to all feed items from cache. Emits event to client for item render
 - DELETE /patterns/:name - remove pattern from runtime (will not be applied to new incoming feed items)
 - GET /patterns - list current patterns
 
