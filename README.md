@@ -28,3 +28,7 @@ Source
 Feed items
 
 - GET /feed-items?pattern=.*Crypto.* - list all feed items from runtime that match this pattern
+
+# Feed items pull mechanism
+
+- In the root file (app.ts) startFeedPull() function is invoked for fetching data in intervals. Interval time is defined in env variable PULL_INTERVAL
