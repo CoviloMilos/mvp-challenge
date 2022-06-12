@@ -32,3 +32,8 @@ Feed items
 # Feed items pull mechanism
 
 - In the root file (app.ts) startFeedPull() function is invoked for fetching data in intervals. Interval time is defined in env variable PULL_INTERVAL
+
+# Live news
+
+- On http://localhost:3000 there is small webpage for rendering live news
+
