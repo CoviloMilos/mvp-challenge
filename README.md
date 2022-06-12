@@ -45,3 +45,12 @@ Feed items
     pattern: .*Crypto.*
   }
   If item matches above pattern it will be printed in stdout/crypto.txt
+
+# Missing requirement
+
+- Feed item doesn't always include full article. One way to figure out that is when feed item doesn't include <content> tag. So for that reason I created /server/services/scrapper.service.ts which will pull HTML from web page and parse it whenever <content> tag is not present in feed item. At a later stage of development I found out that rss-parser always maps content tag (even if doesn't exist in original item) from description or content tag. So from this reason scrapper.service isn't invoked.
+  
+# Improvements
+
+- Write unit/integration tests
+- Build custom rss feed reader library.
