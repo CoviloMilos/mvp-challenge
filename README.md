@@ -27,7 +27,7 @@ Source
 
 Feed items
 
-- GET /feed-items?pattern=.*Crypto.* - list all feed items from runtime that match this pattern
+- GET /feed-items?pattern=.*Crypto.* - list all feed items from runtime that matches passed pattern
 
 # Feed items pull mechanism
 
