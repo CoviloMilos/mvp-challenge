@@ -14,6 +14,17 @@
 # API endpoints
 
 Pattern
+
 - POST /patterns - create pattern in runtime and apply it to all feed items from cache
 - DELETE /patterns/:name - remove pattern from runtime (will not be applied to new incoming feed items)
 - GET /patterns - list current patterns
+
+Source
+
+- POST /sources - create source in runtime and fetch from it in next pull iteration
+- DELETE /sources/:name - remove pattern from runtime (will not be used for fetching feed items anymore)
+- GET /sources - list current sources
+
+Feed items
+
+- GET /feed-items?pattern=.*Crypto.* - list all feed items from runtime that match this pattern
