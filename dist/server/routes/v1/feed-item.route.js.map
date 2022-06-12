@@ -1,0 +1,1 @@
+{"version":3,"file":"feed-item.route.js","sourceRoot":"","sources":["../../../../server/routes/v1/feed-item.route.ts"],"names":[],"mappings":";;;;;AAAA,qCAAiC;AACjC,iGAAuE;AACvE,mDAAyD;AAEzD,MAAM,cAAc,GAAW,IAAA,gBAAM,GAAE,CAAC;AAExC,cAAc,CAAC,GAAG,CAChB,aAAa,EACb,kCAAoB,EACpB,8BAAkB,CAAC,sBAAsB,CAC1C,CAAC;AAEF,kBAAe,cAAc,CAAC"}

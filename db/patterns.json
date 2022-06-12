@@ -1,0 +1,30 @@
+[
+  {
+    "name": "listings",
+    "regex": ".*((Coinbase)|(Binance)|(KuCoin)|(Kraken)|(FTX)).*list.*"
+  },
+  {
+    "name": "bad-news",
+    "regex": ".*((hack)|(exploit)|(vuln))"
+  },
+  {
+    "name": "eth-fork",
+    "regex": ".*((Ethereum)|(ETH)).*((fork)|(upgrad)).*"
+  },
+  {
+    "name": "airdrop",
+    "regex": ".*Airdrop.*(announcement)|(eligibility)|(eligible).*"
+  },
+  {
+    "name": "influencers",
+    "regex": ".*(Elon Musk)|(Butherin Vitalik)|(Jack Dorsey)|(Gavin Wood).*"
+  },
+  {
+    "name": "celsius",
+    "regex": ".*(Celsius)|(Celsius Network)|(Alex Mashinsky).*"
+  },
+  {
+    "name": "nft",
+    "regex": ".*Nft.*(whitelist)|(mint)|(free).*"
+  }
+]
