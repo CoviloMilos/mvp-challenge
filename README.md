@@ -43,11 +43,11 @@ Feed items
 
   ```javscript
   const pattern = {
-    name: "crypto",
-    pattern: .*Crypto.*
+    name: "airdrop",
+    pattern: .*Airdrop.*(announcement)|(eligibility)|(eligible).*
   }
   ```
-  If item matches above pattern it will be printed in stdout/crypto.txt
+  If item matches above pattern it will be printed in stdout/airdrop.txt
 
 # Missing requirement
 
