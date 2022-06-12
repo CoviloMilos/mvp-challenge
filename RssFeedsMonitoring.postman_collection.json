@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "302fb212-3bed-4fa1-8940-8350ffa03288",
+		"name": "RssFeedsMonitoring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete Pattern",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patterns/crypto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patterns",
+						"crypto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Patterns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patterns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patterns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Pattern",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"crypto\",\n    \"regex\": \".*Crypto.*\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patterns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patterns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Sources",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"cryptobriefing\",\n    \"url\": \"https://cryptobriefing.com/feed/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Source",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"cryptopotato\",\n    \"url\": \"https://cryptopotato.com/feed\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Source",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sources/cointelegraph",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sources",
+						"cointelegraph"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Feed Items By Pattern",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/feed-items?pattern=.*Nft.*(whitelist)|(mint)|(free).*",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"feed-items"
+					],
+					"query": [
+						{
+							"key": "pattern",
+							"value": ".*Nft.*(whitelist)|(mint)|(free).*"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
