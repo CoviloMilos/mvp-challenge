@@ -1,5 +1,5 @@
 {
-  "name": "mvp-workshop-challenge",
+  "name": "rss-news-monitoring",
   "version": "1.0.0",
   "description": "Crypto news monitoring",
   "main": "index.js",
